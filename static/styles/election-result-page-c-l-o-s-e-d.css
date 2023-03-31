@@ -1,0 +1,251 @@
+.election-result-page-c-l-o-s-e-d-container {
+  min-height: 100vh;
+}
+.election-result-page-c-l-o-s-e-d-election-result-page-c-l-o-s-e-d {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(240, 240, 240, 1);
+}
+.election-result-page-c-l-o-s-e-d-frame16desktopsiteheading {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 84px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.election-result-page-c-l-o-s-e-d-text {
+  top: 26px;
+  left: 64px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Black;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 900;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-pageitems {
+  top: 20px;
+  left: 671px;
+  width: 705px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border-color: transparent;
+}
+.election-result-page-c-l-o-s-e-d-text02 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 48px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-text04 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 48px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-text06 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 48px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-text08 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 48px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-frame28cart-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 48px;
+}
+.election-result-page-c-l-o-s-e-d-frame03filled-button {
+  height: 44px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: rgba(183, 10, 19, 1);
+}
+.election-result-page-c-l-o-s-e-d-text10 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-s-v-g25home-icon {
+  top: 29px;
+  left: 1208px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.election-result-page-c-l-o-s-e-d-rectangle14 {
+  top: 186px;
+  left: 130px;
+  width: 1254px;
+  height: 823px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 15px 15px 0 0;
+}
+.election-result-page-c-l-o-s-e-d-text12 {
+  top: 206px;
+  left: 169px;
+  color: var(--dl-color-default-dark);
+  width: 1236px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Urbanist;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-text14 {
+  top: 781px;
+  left: 374px;
+  color: var(--dl-color-default-dark);
+  width: 692px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Urbanist;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-login-button {
+  top: 103px;
+  left: 883px;
+  width: 479px;
+  height: 63px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 1);
+}
+.election-result-page-c-l-o-s-e-d-text16 {
+  top: 21.375001907348633px;
+  left: 50.802947998046875px;
+  color: rgba(0, 0, 0, 1);
+  width: 363px;
+  height: auto;
+  position: absolute;
+  font-size: 15px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Urbanist;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.election-result-page-c-l-o-s-e-d-s-v-g17clock-icon {
+  top: 315px;
+  left: 515px;
+  width: 410px;
+  height: 410px;
+  position: absolute;
+}
