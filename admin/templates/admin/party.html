@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block title %} Party {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col lg-12">
+            <div class="jumbotron p-3">
+                <h2>Manage <b>Party</b> <button type="button" class="btn btn-success float-right"
+                    data-toggle="modal" data-target="#mymodal">Add New Party</button> </h2>
+                    
+                    {% with messages = get_flashed_messages() %}
+
+                    {% if messages %}
+
+                    {% for message in messages %}
+                    
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                            <span aria-hidden="true">x</span>
+                        </button>
+                        {{ message }}
+                    </div>
+
+                    {% endfor %}
+
+                    {% endif %}
+
+                    {% endwith %}
+                    <table class="table table-hover table-dark ">
+                        <tr>
+                            <th>Title</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Election Areas</th>
+                            <th>Action</th>
+                        </tr>
+                        {% for row in parties %}
+
+                        {% set title = row.title.split(' ') %}
+                        {% set new_title = title|join('')%}
+                        
+                        
+                        <tr>
+                            <td>{{row.title}}</td>
+                            <td>{{row.username}}</td>
+                            <td>{{row.password}}</td>
+                            <td>
+                                <ul style="padding-left: 0; list-style:none">
+                                    {% for area in row.participating %}
+                                    <li  >
+                                        {{ area.title }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="/admin/update_party/{{row.title}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{ new_title }}">Edit</a>
+                                <a href="/admin/delete_party/{{row.title}}" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure about deleting?')">Delete</a>
+                            </td>
+                        </tr>
+                        
+                        <div id="modaledit{{ new_title }}" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Update Information</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="{{url_for('admin.update_party')}}" method="POST">
+                                            <div class="form-group">
+                                                <label>Title:</label>
+                                                
+                                                <input readonly type="text" class="form-control" name="title" value="{{row.title}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Username:</label>
+                                                <input type="text" class="form-control" name="username" value="{{row.username}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password:</label>
+                                                <input type="password" class="form-control" name="password" value="{{row.password}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ea">Election Areas:</label>
+                                                    <select class="form-control" name="participating"  id="ea" multiple>
+                                                        {% for area in election_areas %}
+                                                                {% for participating_area in row.participating if area.title == participating_area.title %}
+                                                                    <option value="{{area.title}}" selected>{{area.title}}</option>
+
+                                                                {% else %}
+                                                                    <option value="{{area.title}}">{{area.title}}</option>
+                                                                {% endfor %}
+                                                        {% endfor %}
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit">Update</button>
+                                            </div>
+            
+                                        </form>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </table>
+            </div>
+
+            <div id="mymodal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Party</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{url_for('admin.insert_party')}}" method="POST">
+                                <div class="form-group">
+                                    <label>Title:</label>
+                                    
+                                    <input type="text" class="form-control" name="title" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Username:</label>
+                                    <input type="text" class="form-control" name="username" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password:</label>
+                                    <input type="text" class="form-control" name="password" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ea">Election Areas:</label>
+                                        <select class="form-control" name="participating" id="ea" multiple>
+                                            {% for area in election_areas %}
+                                                <option value="{{area.title}}">{{area.title}}</option>
+                                            {% endfor %}
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit">Add Party</button>
+                                </div>
+
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}
